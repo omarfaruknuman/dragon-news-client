@@ -27,7 +27,7 @@ const Header = () => {
                         <Nav.Link href="#pricing">Pricing</Nav.Link>
                     </Nav>
                     <Nav>
-                        <Nav.Link >
+                        <Nav>
                             {
                                 user?.uid ? 
                                 <>
@@ -41,8 +41,8 @@ const Header = () => {
                                 </>
                             }
                             
-                            </Nav.Link>
-                        <Nav.Link eventKey={2} href="#memes">
+                            </Nav>
+                        <Link to='/profile'>
                           {
                             user?.photoURL ?
                             <Image 
@@ -53,7 +53,7 @@ const Header = () => {
                             :
                             <FaUser></FaUser>
                           }
-                        </Nav.Link>
+                        </Link>
                     </Nav>
                     <div className='d-lg-none'>
                         <LeftSideNav></LeftSideNav>
